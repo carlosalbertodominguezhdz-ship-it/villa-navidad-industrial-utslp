@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#075b38">
+  <title>Villa Navideña | División Industrial UTSLP</title>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <style>
+    :root { color-scheme: light; --green:#075b38; --gold:#e4b447; --ink:#173329; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:#f3f7f4; color:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; }
+    header { background:var(--green); color:white; text-align:center; padding:1.1rem 1rem .9rem; border-bottom:5px solid var(--gold); }
+    header h1 { margin:0; font-size:clamp(1.35rem,5vw,2rem); letter-spacing:.02em; }
+    header p { margin:.35rem 0 0; opacity:.92; }
+    main { width:min(100%,900px); margin:auto; padding:1rem; }
+    .viewer { position:relative; overflow:hidden; background:radial-gradient(ellipse at 50% 80%,#fff 0,#e1eee6 65%,#c9dfd0 100%); border:1px solid #d1dfd5; border-radius:22px; box-shadow:0 12px 32px #0b4e2518; }
+    model-viewer { width:100%; height:min(68vh,650px); min-height:380px; --poster-color:transparent; background:transparent; }
+    #ar-button { position:absolute; right:16px; bottom:16px; border:0; border-radius:999px; padding:14px 20px; color:white; background:var(--green); font-weight:700; font-size:1rem; box-shadow:0 4px 14px #0003; cursor:pointer; }
+    #ar-button:focus-visible { outline:3px solid var(--gold); outline-offset:3px; }
+    .instructions { background:white; border-radius:16px; padding:1rem 1.1rem; margin-top:1rem; box-shadow:0 4px 16px #0b4e2510; }
+    .instructions h2 { margin:.1rem 0 .5rem; font-size:1.08rem; color:var(--green); }
+    .instructions ol { padding-left:1.3rem; margin:.4rem 0; }
+    .instructions li { margin:.35rem 0; line-height:1.4; }
+    .note { color:#52655b; font-size:.9rem; margin:.8rem .1rem; }
+    footer { text-align:center; color:#52655b; padding:.5rem 1rem 1.3rem; font-size:.83rem; }
+    @media (max-width:520px) { main {padding:.7rem;} model-viewer {height:64vh;min-height:350px;} #ar-button {left:50%;right:auto;transform:translateX(-50%);white-space:nowrap;} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>División Industrial</h1>
+    <p>Villa Navideña UTSLP · Explora el árbol de la ingeniería</p>
+  </header>
+  <main>
+    <section class="viewer" aria-label="Modelo 3D de la villa navideña industrial">
+      <model-viewer
+        src="assets/aldea_division_industrial.glb"
+        alt="Cardenal vestido de Santa junto a un árbol navideño con símbolos de ingeniería industrial"
+        ar
+        ar-modes="scene-viewer quick-look webxr"
+        ar-scale="auto"
+        camera-controls
+        touch-action="pan-y"
+        auto-rotate
+        shadow-intensity="1"
+        exposure="1"
+        environment-image="neutral"
+        interaction-prompt="auto"
+        camera-orbit="0deg 72deg 4.5m"
+        min-camera-orbit="auto 35deg 3m"
+        max-camera-orbit="auto 105deg 7m">
+        <button id="ar-button" slot="ar-button">🎄 Ver en mi espacio</button>
+      </model-viewer>
+    </section>
+    <section class="instructions">
+      <h2>Cómo explorar</h2>
+      <ol>
+        <li>Gira el modelo con un dedo y acerca o aleja con dos dedos.</li>
+        <li>Toca <strong>Ver en mi espacio</strong> y permite el acceso a la cámara.</li>
+        <li>Apunta al piso y toca para colocar la villa; muévete alrededor para verla.</li>
+      </ol>
+      <p class="note">La experiencia requiere un teléfono compatible con realidad aumentada y conexión a internet. En computadoras se puede girar y acercar el modelo 3D.</p>
+    </section>
+  </main>
+  <footer>Villa Navideña · División Industrial · UTSLP</footer>
+</body>
+</html>
